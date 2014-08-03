@@ -1,0 +1,20 @@
+$TTL 38400
+; reverse address file for netecom.isp.br
+;
+@ IN SOA ns1.netecom.isp.br. admin.netecom.isp.br. (
+                                2012010100 ;serial
+                                28800   ;refresh
+                                7200    ;retry
+                                3600000 ;expire
+                                86400 ) ;minimum        
+
+
+@         IN    NS   ns1.netecom.isp.br.
+@         IN    NS   ns2.netecom.isp.br.
+
+
+$GENERATE 0-255 $ PTR static-10-70-2-$.netecom.isp.br.
+
+
+
+
