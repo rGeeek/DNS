@@ -1,0 +1,22 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+@	IN	SOA	ns1.netecom.isp.br. hostmaster.netecom.isp.br. (
+				2012010100 ; serial
+				7200       ; refresh (2 hours)
+				1800       ; retry (30 minutes)
+				1209600    ; expire (2 weeks)
+				300        ; minimum (5 minutes)
+				)
+@	IN	NS	ns1
+@	IN	NS	ns2
+@	IN		NS	ns1.netecom.isp.br.
+@	IN		NS	ns2.netecom.isp.br.
+			MX	5 mail.netecom.isp.br.
+			TXT	"v=spf1 mx -all"
+$ORIGIN netecom.isp.br.
+ftp			CNAME	www
+mail			A	10.70.2.9
+ns1			A	10.70.2.3
+ns2			A	10.70.2.4
+pop3			CNAME	mail
+www			CNAME	netecom.isp.br.
